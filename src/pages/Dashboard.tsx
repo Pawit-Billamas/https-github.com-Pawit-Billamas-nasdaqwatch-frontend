@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLang } from '../context/LangContext';
-import { getWatchlist, getMarketNews, addToWatchlist, removeFromWatchlist } from '../services/api';
+import { getWatchlist, getMarketNews, removeFromWatchlist } from '../services/api';
 import type { WatchlistItem, NewsItem } from '../types';
 
 const t = {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type {
   Stock, NewsItem, NewsSummary, WatchlistItem, WeeklyReport, FundamentalsData,
-  PortfolioHolding, PortfolioSummary, CompareData, CalendarWeek,
+  PortfolioSummary, CompareData, CalendarWeek,
   AlertRule, AlertEvent, AlertKind,
 } from '../types';
 

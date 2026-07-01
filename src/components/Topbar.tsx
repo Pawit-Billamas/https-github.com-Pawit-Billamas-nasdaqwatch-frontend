@@ -11,7 +11,7 @@ export default function Topbar() {
   const [results, setResults] = useState<Stock[]>([]);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const timer = useRef<ReturnType<typeof setTimeout>>();
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const onChange = (v: string) => {
     setQuery(v);

@@ -119,8 +119,8 @@ function MetricSection({ title, keys, metrics }: {
 }
 
 // ─── Score bar ───────────────────────────────────────────────────────────────
-function ScoreBar({ score, good, bad, neutral }: {
-  score: number; good: number; bad: number; neutral: number;
+function ScoreBar({ good, bad, neutral }: {
+  score?: number; good: number; bad: number; neutral: number;
 }) {
   const total = good + bad + neutral || 1;
   const goodPct  = (good    / total) * 100;

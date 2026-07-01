@@ -84,10 +84,10 @@ export default function Discover() {
   const filtered = sectorFilter ? display.filter(s => s.sector === sectorFilter) : display;
 
   const sorted = [...filtered].sort((a, b) => {
-    const av = (a[sortKey] as number) ?? 0;
-    const bv = (b[sortKey] as number) ?? 0;
-    if (typeof av === 'string') return sortAsc ? av.localeCompare(bv as string) : (bv as string).localeCompare(av);
-    return sortAsc ? av - bv : bv - av;
+    const av = a[sortKey] ?? 0;
+    const bv = b[sortKey] ?? 0;
+    if (typeof av === 'string' && typeof bv === 'string') return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+    return sortAsc ? (av as number) - (bv as number) : (bv as number) - (av as number);
   });
 
   const toggleSort = (key: keyof Stock) => {
