@@ -6,14 +6,12 @@ const labels = {
     navMain: 'Overview', navResearch: 'Research',
     dashboard: 'Dashboard', portfolio: 'Portfolio', alerts: 'Alerts',
     discover: 'Discover', compare: 'Compare', insights: 'AI Insights', calendar: 'Calendar',
-    proTitle: 'Unlock AI Pro', proSub: 'Deeper analysis & instant alerts in Thai.', proCta: 'Upgrade',
     member: 'Pro member',
   },
   th: {
     navMain: 'ภาพรวม', navResearch: 'วิจัย',
     dashboard: 'แดชบอร์ด', portfolio: 'พอร์ตโฟลิโอ', alerts: 'แจ้งเตือน',
     discover: 'ค้นหาหุ้น', compare: 'เปรียบเทียบ', insights: 'AI สรุปข่าว', calendar: 'ปฏิทิน',
-    proTitle: 'ปลดล็อก AI Pro', proSub: 'วิเคราะห์เชิงลึกและแจ้งเตือนทันทีเป็นภาษาไทย', proCta: 'อัปเกรด',
     member: 'สมาชิก Pro',
   },
 };
@@ -134,20 +132,7 @@ export default function Sidebar() {
       </nav>
 
       {/* Footer */}
-      <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 14 }}>
-        {/* Pro CTA */}
-        <div style={{
-          background: 'linear-gradient(150deg,#2f54bf,#21357f)', borderRadius: 15,
-          padding: 15, color: '#fff',
-        }}>
-          <div style={{ fontSize: 12.5, fontWeight: 600, lineHeight: 1.4 }}>{t.proTitle}</div>
-          <div style={{ fontSize: 11, opacity: 0.82, marginTop: 4, lineHeight: 1.5 }}>{t.proSub}</div>
-          <div style={{
-            marginTop: 11, background: 'rgba(255,255,255,0.18)', borderRadius: 9,
-            padding: '7px 0', textAlign: 'center', fontSize: 11.5, fontWeight: 600, cursor: 'pointer',
-          }}>{t.proCta}</div>
-        </div>
-        {/* User */}
+      <div style={{ marginTop: 'auto' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '6px 6px 2px' }}>
           <div style={{
             width: 32, height: 32, borderRadius: '50%', background: '#e7dcc4',
